@@ -1,0 +1,49 @@
+{
+  "products": [
+    {
+      "id": "ring-display",
+      "name": "Power Ring Display",
+      "vendor": "Green Hill Goods",
+      "category": "Collectibles",
+      "description": "A bright gold display item for the mall's retro gaming wing.",
+      "price": 19.99,
+      "spriteKind": "ring"
+    },
+    {
+      "id": "runner-shoes",
+      "name": "Blue Runner Shoes",
+      "vendor": "Speed Lab",
+      "category": "Footwear",
+      "description": "Lightweight blue shoes for fast virtual mall traversal.",
+      "price": 74.95,
+      "spriteKind": "shoe"
+    },
+    {
+      "id": "workshop-kit",
+      "name": "Twin-Tail Workshop Kit",
+      "vendor": "Tech Workshop",
+      "category": "Maker Tools",
+      "description": "A playful starter kit for building small mechanical gadgets.",
+      "price": 42.50,
+      "spriteKind": "tech"
+    },
+    {
+      "id": "guardian-jacket",
+      "name": "Red Guardian Jacket",
+      "vendor": "Adventure Outfitters",
+      "category": "Apparel",
+      "description": "A bold red jacket for exploring every corner of the mall.",
+      "price": 89.00,
+      "spriteKind": "jacket"
+    },
+    {
+      "id": "chao-care-pack",
+      "name": "Chao Care Pack",
+      "vendor": "Companion Corner",
+      "category": "Companions",
+      "description": "A cheerful care package for virtual companion fans.",
+      "price": 24.00,
+      "spriteKind": "buddy"
+    }
+  ]
+}
