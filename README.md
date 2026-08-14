@@ -51,7 +51,7 @@ Pass a different port as the first argument if `8766` is already occupied, then 
 
 ## Cookbook provenance
 
-The prototype’s enemy, collision, inheritance, and UI planning draws on the genre and implementation concepts in Casey Hardman, *Game Programming with Unity and C#*, Chapter 26, “Tower Defense Design and Outline” (2020), DOI: https://doi.org/10.1007/978-1-4842-5656-5_26. The implementation here is an original portfolio adaptation and is not copied chapter code.
+The obstacle-course structure is an original implementation inspired by the planning topics in Casey Hardman, *Game Programming with Unity and C#*, Chapter 13, “Obstacle Course Design and Outline” (2020), DOI: https://doi.org/10.1007/978-1-4842-5656-5_13. The implementation here is not copied chapter code.
 
 ## Portfolio next steps
 
