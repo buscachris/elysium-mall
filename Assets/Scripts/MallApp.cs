@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ElysiumMall
+namespace MallDemo
 {
     public class MallApp : MonoBehaviour
     {
@@ -50,7 +50,6 @@ namespace ElysiumMall
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape)) HideProduct();
-            if (Input.GetKeyDown(KeyCode.F11)) ToggleFullscreen();
             if (Time.unscaledTime >= nextControllerPoll)
             {
                 nextControllerPoll = Time.unscaledTime + 1f;
@@ -136,10 +135,10 @@ namespace ElysiumMall
             CreateBoundary(center + new Vector3(0f, 1f, 10f), new Vector3(34f, 2f, 0.5f), mallRoot);
             CreateBoundary(center + new Vector3(0f, 1f, -10f), new Vector3(34f, 2f, 0.5f), mallRoot);
             CreateBoundary(center + new Vector3(17f, 1f, 0f), new Vector3(0.5f, 2f, 20f), mallRoot);
-            RuntimeFactory.WorldLabel("MallSign", "ELYSIUM MALL", center + new Vector3(0f, 5f, 9.3f), blue, mallRoot, 46);
+            RuntimeFactory.WorldLabel("MallSign", "MALL DEMO", center + new Vector3(0f, 5f, 9.3f), blue, mallRoot, 46);
             RuntimeFactory.WorldLabel("MallSubSign", "CATALOG / COMPANIONS / SPEED LAB", center + new Vector3(0f, 4.2f, 9.3f), navy, mallRoot, 20);
 
-            CreateShopfront(center + new Vector3(-11f, 0f, 3.7f), "GREEN HILL GOODS", cyan);
+            CreateShopfront(center + new Vector3(-11f, 0f, 3.7f), "ARCADE GOODS", cyan);
             CreateShopfront(center + new Vector3(0f, 0f, 3.7f), "SPEED LAB", gold);
             CreateShopfront(center + new Vector3(11f, 0f, 3.7f), "TECH WORKSHOP", pink);
 
@@ -194,11 +193,11 @@ namespace ElysiumMall
             panelRect.offsetMin = new Vector2(18f, 18f);
             panelRect.offsetMax = new Vector2(-18f, -18f);
 
-            titleText = RuntimeFactory.UiText(panelObject.transform, "ELYSIUM MALL // UNITY VERTICAL SLICE", 24, blue, new Vector2(0f, 0.86f), new Vector2(0.65f, 1f), Vector2.zero, Vector2.zero);
+            titleText = RuntimeFactory.UiText(panelObject.transform, "MALL DEMO // UNITY VERTICAL SLICE", 24, blue, new Vector2(0f, 0.86f), new Vector2(0.65f, 1f), Vector2.zero, Vector2.zero);
             statusText = RuntimeFactory.UiText(panelObject.transform, "Loading world...", 17, navy, new Vector2(0f, 0.78f), new Vector2(0.68f, 0.86f), Vector2.zero, Vector2.zero);
             catalogText = RuntimeFactory.UiText(panelObject.transform, "Catalog: waiting for JSON API...", 15, navy, new Vector2(0f, 0.70f), new Vector2(0.68f, 0.78f), Vector2.zero, Vector2.zero);
             controllerText = RuntimeFactory.UiText(panelObject.transform, "Controller: scanning...", 15, navy, new Vector2(0f, 0.62f), new Vector2(0.68f, 0.70f), Vector2.zero, Vector2.zero);
-            RuntimeFactory.UiText(panelObject.transform, "WASD / left stick / D-pad: move    SPACE / button 0: dash    E / button 1: inspect    F11: fullscreen", 14, navy, new Vector2(0f, 0f), new Vector2(0.80f, 0.05f), Vector2.zero, Vector2.zero);
+            RuntimeFactory.UiText(panelObject.transform, "WASD / left stick / D-pad: move    SPACE / button 0: dash    E / button 1: inspect", 14, navy, new Vector2(0f, 0f), new Vector2(0.80f, 0.05f), Vector2.zero, Vector2.zero);
 
             Button mallButton = RuntimeFactory.UiButton(panelObject.transform, "SHOPPING AREA", new Vector2(0.76f, 0.90f), new Vector2(1f, 0.97f), Vector2.zero, Vector2.zero);
             mallButton.onClick.AddListener(ReturnToMall);
@@ -342,15 +341,8 @@ namespace ElysiumMall
         private void ConfigureFullscreenForBuild()
         {
             if (Application.isEditor) return;
-            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
-            Screen.fullScreen = true;
-        }
-
-        private void ToggleFullscreen()
-        {
-            if (Application.isEditor) return;
-            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
-            Screen.fullScreen = !Screen.fullScreen;
+            Screen.fullScreenMode = FullScreenMode.Windowed;
+            Screen.fullScreen = false;
         }
 
         private void UpdateControllerStatus()

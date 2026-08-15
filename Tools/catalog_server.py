@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Serve the Elysium Mall demo catalog and recommendation API."""
+"""Serve the Mall Demo catalog and recommendation API."""
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
 import json
@@ -15,7 +15,7 @@ class Handler(BaseHTTPRequestHandler):
         request = urlparse(self.path)
         route = request.path.rstrip("/") or "/"
         if route == "/health":
-            self._send_json({"service": "elysium-mall-catalog", "status": "ok"})
+            self._send_json({"service": "mall-demo-catalog", "status": "ok"})
             return
 
         catalog = json.loads(CATALOG.read_text(encoding="utf-8"))
@@ -28,7 +28,7 @@ class Handler(BaseHTTPRequestHandler):
             self._send_json(build_recommendations(catalog, profile))
             return
 
-        self._send_json({"service": "elysium-mall-catalog", "route": "/catalog.json"}, 404)
+        self._send_json({"service": "mall-demo-catalog", "route": "/catalog.json"}, 404)
 
     def _send_json(self, value, status=200):
         body = json.dumps(value).encode("utf-8")
@@ -45,9 +45,9 @@ class Handler(BaseHTTPRequestHandler):
 
 
 PROFILE_ORDER = {
-    "explorer": ["runner-shoes", "ring-display", "chao-care-pack"],
-    "style": ["guardian-jacket", "runner-shoes", "chao-care-pack"],
-    "tech": ["workshop-kit", "runner-shoes", "ring-display"],
+    "explorer": ["runner-shoes", "token-display", "companion-care-pack"],
+    "style": ["guardian-jacket", "runner-shoes", "companion-care-pack"],
+    "tech": ["workshop-kit", "runner-shoes", "token-display"],
 }
 
 PROFILE_RATIONALE = {
@@ -65,7 +65,7 @@ def build_recommendations(catalog, profile):
     return {
         "profile": profile if profile in PROFILE_ORDER else "explorer",
         "rationale": PROFILE_RATIONALE.get(profile, PROFILE_RATIONALE["explorer"]),
-        "model": "elysium-demo-ranker-v1",
+        "model": "mall-demo-ranker-v1",
         "products": products,
     }
 

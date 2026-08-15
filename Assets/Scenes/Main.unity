@@ -123,22 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!115 &1104063526
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: CatalogService
-  m_Namespace: ElysiumMall
-  m_AssemblyName: Assembly-CSharp
---- !u!1 &1959855346
+--- !u!1 &1910904844
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,49 +131,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1959855349}
-  - component: {fileID: 1959855348}
-  - component: {fileID: 1959855347}
+  - component: {fileID: 1910904847}
+  - component: {fileID: 1910904846}
+  - component: {fileID: 1910904845}
   m_Layer: 0
-  m_Name: ElysiumMallApp
+  m_Name: MallDemoApp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1959855347
+--- !u!114 &1910904845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959855346}
+  m_GameObject: {fileID: 1910904844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 2040804890}
+  m_Script: {fileID: 11500000, guid: 7f7d9f6c5f174b2d9f9d6f0b4c7a1e10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   catalogEndpoint: http://127.0.0.1:8766/catalog.json
   recommendationEndpoint: http://127.0.0.1:8766/recommendations.json
---- !u!114 &1959855348
+--- !u!114 &1910904846
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959855346}
+  m_GameObject: {fileID: 1910904844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1104063526}
+  m_Script: {fileID: 11500000, guid: 4e1a7c9d2b5f46a8b3c0d6e9f7a2b814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1959855349
+--- !u!4 &1910904847
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959855346}
+  m_GameObject: {fileID: 1910904844}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -197,23 +182,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!115 &2040804890
-MonoScript:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  serializedVersion: 7
-  m_DefaultReferences: {}
-  m_Icon: {fileID: 0}
-  m_Type: 0
-  m_ExecutionOrder: 0
-  m_ClassName: MallApp
-  m_Namespace: ElysiumMall
-  m_AssemblyName: Assembly-CSharp
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1959855349}
+  - {fileID: 1910904847}

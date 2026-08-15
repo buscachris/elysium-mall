@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace ElysiumMall
+namespace MallDemo
 {
     public static class PixelSpriteFactory
     {
@@ -40,7 +40,7 @@ namespace ElysiumMall
 
             switch (kind)
             {
-                case "ring":
+                case "token":
                     for (int y = 3; y < 13; y++)
                         for (int x = 3; x < 13; x++)
                         {

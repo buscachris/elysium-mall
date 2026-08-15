@@ -1,6 +1,6 @@
 using System;
 
-namespace ElysiumMall
+namespace MallDemo
 {
     [Serializable]
     public class CatalogResponse

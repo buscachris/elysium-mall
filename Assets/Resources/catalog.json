@@ -1,17 +1,17 @@
 {
   "products": [
     {
-      "id": "ring-display",
-      "name": "Power Ring Display",
-      "vendor": "Green Hill Goods",
+      "id": "token-display",
+      "name": "Bonus Token Display",
+      "vendor": "Arcade Goods",
       "category": "Collectibles",
-      "description": "A bright gold display item for the mall's retro gaming wing.",
+      "description": "A bright gold display item for the mall's interactive entertainment wing.",
       "price": 19.99,
-      "spriteKind": "ring"
+      "spriteKind": "token"
     },
     {
       "id": "runner-shoes",
-      "name": "Blue Runner Shoes",
+      "name": "Dash Trainer Shoes",
       "vendor": "Speed Lab",
       "category": "Footwear",
       "description": "Lightweight blue shoes for fast virtual mall traversal.",
@@ -20,7 +20,7 @@
     },
     {
       "id": "workshop-kit",
-      "name": "Twin-Tail Workshop Kit",
+      "name": "Dual-Mode Workshop Kit",
       "vendor": "Tech Workshop",
       "category": "Maker Tools",
       "description": "A playful starter kit for building small mechanical gadgets.",
@@ -37,8 +37,8 @@
       "spriteKind": "jacket"
     },
     {
-      "id": "chao-care-pack",
-      "name": "Chao Care Pack",
+      "id": "companion-care-pack",
+      "name": "Companion Care Pack",
       "vendor": "Companion Corner",
       "category": "Companions",
       "description": "A cheerful care package for virtual companion fans.",

@@ -34,3 +34,5 @@ mono_crash.*
 
 # Local catalog-service logs
 Tools/*.log
+demo/*.mp4
+demo/*.log

@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace ElysiumMall
+namespace MallDemo
 {
     public class CatalogService : MonoBehaviour
     {

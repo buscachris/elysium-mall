@@ -1,4 +1,4 @@
-# Elysium Mall — Unity/C# Portfolio Prototype
+# Mall Demo — Unity/C# Portfolio Prototype
 
 This prototype has three connected portfolio demonstrations:
 
@@ -32,7 +32,7 @@ Pass a different port as the first argument if `8766` is already occupied, then 
 - Controller button 1: inspect a nearby shopping kiosk
 - `Escape`: close the product card
 - `EXPLORE`, `STYLE`, and `TECH`: change the recommendation profile
-- `F11`: fullscreen in a standalone build; maximize the Game view in the Unity Editor for testing
+- The standalone build opens in a 1024×768 window for capture and review.
 - Use the UI buttons to switch between the two areas
 
 ## Evidence map
@@ -57,8 +57,18 @@ The obstacle-course structure is an original implementation inspired by the plan
 
 1. Capture Unity Profiler baseline and optimized runs with the same course traversal.
 2. Add an automated test assembly for catalog parsing, movement state, respawn, and product selection.
-3. Add a WebGL build and short demo video.
-4. Replace the generated fan-style placeholders with original or licensed sprites for a public-facing release.
+3. Add a WebGL build; the current demo video is documented as a release asset below.
+4. Replace the generated placeholder sprites with original or licensed assets for a public-facing release.
+
+## Windowed demo capture
+
+After building `Builds/Linux/MallDemo.x86_64`, create a local windowed capture with:
+
+```bash
+Tools/record_demo.sh demo/MallDemo-demo.mp4 30
+```
+
+The MP4 and its local runtime log are presentation artifacts and should be uploaded as a release asset rather than committed to Git.
 
 ## License
 

@@ -1,8 +1,9 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ElysiumMall
+namespace MallDemo
 {
     public static class RuntimeFactory
     {
@@ -15,13 +16,21 @@ namespace ElysiumMall
                 return existing;
             }
 
-            Shader shader = Shader.Find("Unlit/Color");
-            if (shader == null)
+            Material template = Resources.Load<Material>("RuntimeDefaultMaterial");
+            Material material;
+            if (template != null)
             {
-                shader = Shader.Find("Standard");
+                material = new Material(template);
+            }
+            else
+            {
+                Shader shader = Shader.Find("Unlit/Color");
+                if (shader == null) shader = Shader.Find("Standard");
+                if (shader == null) throw new InvalidOperationException("No runtime material shader is available.");
+                material = new Material(shader);
             }
 
-            Material material = new Material(shader) { color = color };
+            material.color = color;
             Materials[color] = material;
             return material;
         }

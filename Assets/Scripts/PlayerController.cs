@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-namespace ElysiumMall
+namespace MallDemo
 {
     [RequireComponent(typeof(CharacterController))]
     public class PlayerController : MonoBehaviour

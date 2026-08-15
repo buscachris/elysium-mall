@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ElysiumMall
+namespace MallDemo
 {
     public class Hazard : MonoBehaviour
     {
