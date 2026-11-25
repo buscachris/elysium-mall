@@ -8,7 +8,6 @@ I built three connected experiences in this Unity mall.
 
 The visual direction is intentionally lightweight: primitive 3D architecture, flat 1990s-corporate colors, orthographic-style framing, and generated pixel sprites presented as camera-facing billboards. The generated sprites are stand-ins; replace them with properly licensed or original art before public distribution.
 
-![Explorer recommendations in the running Linux mall demo](docs/screenshots/concierge.png)
 
 I captured this frame eight seconds into my Linux demo. Selecting the Explorer profile changes the recommendations shown by the concierge.
 
