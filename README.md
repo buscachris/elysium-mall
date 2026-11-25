@@ -1,12 +1,16 @@
 # Mall Demo — Unity/C# Portfolio Prototype
 
-This prototype has three connected portfolio demonstrations:
+I built three connected experiences in this Unity mall.
 
 1. **Speed Circuit** — a playable obstacle-course attraction with movement, dash, respawn, patrolling hazards, wandering hazards, projectiles, spike traps, and a goal gate.
 2. **Shopping Area** — a separate mall zone with interactive product kiosks populated from JSON catalog data fetched through a local HTTP endpoint.
 3. **AI Concierge** — profile-driven recommendations fetched through an AI-service-shaped JSON endpoint, with an offline fallback that keeps the client usable.
 
 The visual direction is intentionally lightweight: primitive 3D architecture, flat 1990s-corporate colors, orthographic-style framing, and generated pixel sprites presented as camera-facing billboards. The generated sprites are stand-ins; replace them with properly licensed or original art before public distribution.
+
+![Explorer recommendations in the running Linux mall demo](docs/screenshots/concierge.png)
+
+I captured this frame eight seconds into my Linux demo. Selecting the Explorer profile changes the recommendations shown by the concierge.
 
 ## Run it
 
@@ -57,7 +61,7 @@ The obstacle-course structure is an original implementation inspired by the plan
 
 1. Capture Unity Profiler baseline and optimized runs with the same course traversal.
 2. Add an automated test assembly for catalog parsing, movement state, respawn, and product selection.
-3. Add a WebGL build; the current demo video is documented as a release asset below.
+3. Build and test a WebGL version.
 4. Replace the generated placeholder sprites with original or licensed assets for a public-facing release.
 
 ## Windowed demo capture
@@ -68,7 +72,7 @@ After building `Builds/Linux/MallDemo.x86_64`, create a local windowed capture w
 Tools/record_demo.sh demo/MallDemo-demo.mp4 30
 ```
 
-The MP4 and its local runtime log are presentation artifacts and should be uploaded as a release asset rather than committed to Git.
+I recorded the Linux player at 1024 × 768. My [verification record](VERIFICATION.md) lists the build, capture settings, and catalog test results.
 
 ## License
 
