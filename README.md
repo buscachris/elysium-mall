@@ -75,4 +75,4 @@ I recorded the Linux player at 1024 × 768. My [verification record](VERIFICATIO
 
 ## License
 
-Released under the MIT License. See [LICENSE](LICENSE).
+I license my original game code and catalog tools under the [MIT License](LICENSE). Unity and its packages retain their own terms. I use the generated sprites as placeholders in the demo. I grant no rights to third-party material depicted in the sprites or screenshots.
